@@ -28,9 +28,11 @@ function App() {
   // if we are having issues connecting try both /like/:id or '/' -
   const updateLikes = () => {
     console.log("Inside PUT");
-    axios.put("/like/:id")
+    axios
+      .put(`/like/${galleryId.id}`, likedimg)
       .then((response) => {
         console.log("Like is updated through PUT", response);
+        fetchImages();
       })
       .catch((error) => {
         console.log("Like could not be updated", error);
