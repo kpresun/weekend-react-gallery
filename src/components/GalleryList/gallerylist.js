@@ -11,3 +11,12 @@ function GalleryList(props) {
 
 
 export default GalleryList;
+
+
+
+// // this goes here:
+// <div>
+// {props.imgList.map(single =>
+//  <GalleryItem key={single.id} single={}
+//  )}
+// </div>
