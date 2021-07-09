@@ -40,10 +40,6 @@ function App() {
       });
   };
 
-  const handleImageClick = (evt) => {
-    evt.preventDefault();
-  }
-
   const handleLikeClick = (evt) => {
     evt.preventDefault();
   }

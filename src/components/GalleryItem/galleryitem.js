@@ -2,7 +2,7 @@ import React from 'react';
 
 function GalleryItem(props) {
     return (
-        <img>{GalleryItem.imgDescription</img>
+        <img >{GalleryItem.imgDescription}</img>
     )
 }
 
