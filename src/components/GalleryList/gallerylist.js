@@ -7,12 +7,6 @@ function GalleryList(props) {
     const [imgOrDes, setImgOrDes] = useState('false');
 
 
-    const handleImageClick = (evt) => {
-        evt.preventDefault();
-// let a const equal something where when true/false
-// return const equal this/that to return a new append
-
-      }
 
 
     return (

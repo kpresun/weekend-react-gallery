@@ -16,8 +16,7 @@ function App() {
 
   const fetchImages = () => {
     console.log("Inside GET");
-    axios
-      .get("/")
+    axios.get("/")
       .then((response) => {
         console.log("images have been retrieved", response);
         setGalleryList(response.data);
@@ -30,8 +29,7 @@ function App() {
   // if we are having issues connecting try both /like/:id or '/' -
   const updateLikes = () => {
     console.log("Inside PUT");
-    axios
-      .put("/like/:id")
+    axios.put("/like/:id")
       .then((response) => {
         console.log("Like is updated through PUT", response);
       })
@@ -42,16 +40,25 @@ function App() {
 
   const handleLikeClick = (evt) => {
     evt.preventDefault();
+  };
+  // this probably belongs here because 'like' exist in the array.
+
+  const handleImageClick = (evt) => {
+    evt.preventDefault();
+// let a const equal something where when true/false
+// return const equal this/that to return a new append
+//this belongs here because we are either going to send img or description in gallery.data
   }
+
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Life of a Coder</h1>
+        <h1>Life of a Coder</h1>
+        <p>The Coding Gallery of Truth.</p>
       </header>
-      <p>The Coding Gallery of Truth.</p>
-      <GalleryList imgClick={handleImageClick} likeClick={handleLikeClick}/>
-      <GalleryItem imgList={GalleryList}/>
+      <GalleryList imgClick={handleImageClick} likeClick={handleLikeClick} />
+      <GalleryItem imgList={GalleryList} />
     </div>
   );
 }
