@@ -1,8 +1,27 @@
 import React from 'react';
-// import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+
+  const [GalleryList, setGalleryList] = useState([]);
+
+  function fetchImages() {    
+    axios.get('/')
+      .then(response => {
+        console.log('images have been retrieved'. response);
+        setGalleryList(response.data);
+      })
+      .catch(error => {
+        console.log('images could not be retrieved', error);
+      });
+
+  }
+
+    
+
+
+
     return (
       <div className="App">
         <header className="App-header">
