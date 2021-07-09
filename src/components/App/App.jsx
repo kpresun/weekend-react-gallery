@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import GalleryList from '../GalleryList/gallerylist';
 
 function App() {
 
@@ -47,7 +48,7 @@ function App() {
           <h1 className="App-title">Life of a Coder</h1>
         </header>
         <p>The Coding Gallery of Truth.</p>
-      <img src="images/babyarray.png" width="250" height="250"/>
+        <GalleryList />
       </div>
     );
 }

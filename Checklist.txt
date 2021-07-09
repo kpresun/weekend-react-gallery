@@ -1,0 +1,21 @@
+Create a gallery to share pictures.
+Visitors can click on image to see description
+Visitors can click a button to like an image
+
+3 components
+[] App: Overall application
+[] GalleryList: All the images
+[] GalleryItem: Single image item
+
+
+Task
+create request inside app
+[] Create an axios get from /gallery
+[] Create GalleryList loop inside App that uses PROPS
+[] Pass individual gallery items via PROPs to GalleryList
+[] Put GalleryItem inside GalleryList
+[] Swap the image with description on click using conditional rendering. -> if onclick display the opposite
+[] Create a like button
+[] Display number counter of likes next to each item
+[] When like button is clicked, use Axios PUT to update the like count. Use /gallery/like/:id.
+[] Create function to update the gallery each time a like button is clicked
