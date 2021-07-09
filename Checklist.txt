@@ -10,11 +10,11 @@ Visitors can click a button to like an image
 
 Task
 create request inside app
-[] Create an axios get from /gallery
-[] Create GalleryList loop inside App that uses PROPS
-[] Pass individual gallery items via PROPs to GalleryList
+[x] Create an axios get from /gallery
+[] Create GalleryList loop inside GalleryList that uses PROPS, MAP, KEY
+[] Pass individual gallery items via PROPs to GalleryItem
+[] Swap the image with description on click using conditional rendering inside GalleryList. -> if onclick display the opposite
 [] Put GalleryItem inside GalleryList
-[] Swap the image with description on click using conditional rendering. -> if onclick display the opposite
 [] Create a like button
 [] Display number counter of likes next to each item
 [] When like button is clicked, use Axios PUT to update the like count. Use /gallery/like/:id.
