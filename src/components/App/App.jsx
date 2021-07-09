@@ -39,8 +39,7 @@ function App() {
 
   return (
     <div className="App">
-        <h1>Life of a Coder</h1>
-      </header>
+      <h1>Life of a Coder</h1>
       <GalleryList imgList={GalleryList} />
     </div>
   );

@@ -4,20 +4,15 @@ import GalleryItem from "../GalleryItem/galleryitem";
 
 function GalleryList(props) {
 
-// maybe define the image path here, only push description or image
-// add counter into return ()
-// // this goes here:
-// <div>
-// {props.imgList.map(single =>
-//  <GalleryItem key={single.id} single={}
-//  )}
-// </div>
-
-
+// I need to loop through the items with Map and Key 
+// I need something here that will grab the items information and return a jsx of:
+// image, description, likes
     return (
-        <>
-        <img src="images/babyarray.png" width="250" height="250"/>
-        </>
+        <div>
+    {props.imgList.map(single =>
+    <GalleryItem key={single.id} imgToShow={single} />
+        </div>
+
     )
 }
 
