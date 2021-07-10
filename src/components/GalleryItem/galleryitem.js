@@ -14,11 +14,7 @@ function GalleryItem(props) {
 
   const handleImageClick = (evt) => {
     evt.preventDefault();
-  // set a status??
-  // let displayItem = (imgOrDes == true) ? run this if true : run this if false:
-  // maybe <p>prop.something.description</p> then <img prop.something.path/>
-
-
+  let displayItem = (imgOrDes === !imgOrDes) ? <img src={prop.imgToShow.path}/>: <p>prop.imgToShow.description</p> ;
 
   };
  
