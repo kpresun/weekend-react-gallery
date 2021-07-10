@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-// import GalleryList from "../GalleryList/gallerylist";
+import GalleryList from "../GalleryList/gallerylist";
 
 function App() {
   useEffect(() => {
@@ -15,10 +15,10 @@ function App() {
 
   const fetchImages = () => {
     console.log("Inside GET");
-    axios.get('/')
+    axios.get('/gallery')
       .then((response) => {
         console.log("images have been retrieved,", response);
-        setGalleryList(response.galleryItems.data);
+        setGalleryList(response.data);
       })
       .catch((error) => {
         console.log("images could not be retrieved", error);
@@ -26,9 +26,9 @@ function App() {
   };
 
   // if we are having issues connecting try both /like/:id or '/' -
-  const updateLikes = (id, likedImg) => {
+  const updateLikes = (id) => {
     console.log("Inside PUT");
-    axios.put(`/${id}`, {likes:likedImg})
+    axios.put(`gallery/like/${id}`)
       .then((response) => {
         console.log("Like is updated through PUT", response);
         fetchImages();
