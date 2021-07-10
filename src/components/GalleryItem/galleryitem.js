@@ -1,10 +1,9 @@
 import React from "react";
-import { useState } from 'react';
+import { useState } from "react";
 
 function GalleryItem(props) {
-  const [counter, setCounter] = useState(0);
+  //   const [counter, setCounter] = useState(0); - MIGHT not need because put router already is doing +=1
   const [imgOrDes, setImgOrDes] = useState("false");
-
 
   // This has to use the counter useState above ti display counter below like button.
   const handleLikeClick = (evt) => {
@@ -14,10 +13,15 @@ function GalleryItem(props) {
 
   const handleImageClick = (evt) => {
     evt.preventDefault();
-  let displayItem = (imgOrDes === !imgOrDes) ? <img src={prop.imgToShow.path}/>: <p>prop.imgToShow.description</p> ;
-
+    let displayItem =
+      imgOrDes === !imgOrDes ? (
+        <img src={props.imgToShow.path} />
+      ) : (
+        <p>{props.imgToShow.description}</p>
+      );
+    //   console.log({props.imgToShow.path});
+    //   console.log({props.imgToShow.description});
   };
- 
 
   return (
     <section>
