@@ -4,7 +4,7 @@ function GalleryItem(props) {
   const [counter, setCounter] = useState(0);
   const [imgOrDes, setImgOrDes] = useState("false");
 
-  // this probably belongs here because 'like' exist in the array.
+
   // This has to use the counter useState above ti display counter below like button.
   const handleLikeClick = (evt) => {
     evt.preventDefault();

@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <h1>Life of a Coder</h1>
-      <GalleryList imgList={galleryList} />
+      <GalleryList imgList={galleryList} likeUpdates={updateLikes}/>
     </div>
   );
 }
