@@ -11,7 +11,7 @@ function App() {
     updateLikes();
   }, []);
 
-  const [GalleryList, setGalleryList] = useState([]);
+  const [galleryList, setGalleryList] = useState([]);
 
   const fetchImages = () => {
     console.log("Inside GET");
@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <h1>Life of a Coder</h1>
-      {/* <GalleryList imgList={GalleryList} /> */}
+      <GalleryList imgList={galleryList} />
     </div>
   );
 }
