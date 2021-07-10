@@ -11,6 +11,8 @@ function GalleryItem(props) {
     theLikes(props.imgToShow);
   };
 
+let displayItem; // going have to try to see what we can set this to so it work!
+
   const handleImageClick = (evt) => {
     evt.preventDefault();
     let displayItem =
@@ -19,8 +21,7 @@ function GalleryItem(props) {
       ) : (
         <p>{props.imgToShow.description}</p>
       );
-    //   console.log({props.imgToShow.path});
-    //   console.log({props.imgToShow.description});
+      console.log(displayItem);
   };
 
   return (
