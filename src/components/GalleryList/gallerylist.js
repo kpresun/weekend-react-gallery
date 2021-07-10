@@ -10,7 +10,7 @@ function GalleryList(props) {
     <>
       <div>
         {props.imgList.map(single => (
-          <GalleryItem key={single.id} imgToShow={single} theLikes={likeUpdates}/>
+          <GalleryItem key={single.id} imgToShow={single} theLikes={props.likeUpdates}/>
         ))}
       </div>
     </>
