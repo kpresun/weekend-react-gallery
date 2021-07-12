@@ -23,7 +23,8 @@ let displayItem; // going have to try to see what we can set this to so it work!
         </div>
       </div>
       <div>
-        <button className="like-button" onClick={() => theLikes(imgToShow.id)}>LIKE: {imgToShow.likes}</button>
+        <button className="like-button" onClick={() => theLikes(imgToShow.id)}>LIKE</button>
+        <p>Total likes: {imgToShow.likes}</p>
      </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import GalleryItem from "../GalleryItem/galleryitem";
+import './gallerylist.css'
 
 function GalleryList({imgList, likeUpdates}) {
   // I need to loop through the items with Map and Key
