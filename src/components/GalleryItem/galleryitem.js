@@ -15,22 +15,25 @@ let displayItem; // going have to try to see what we can set this to so it work!
 
   const handleImageClick = (evt) => {
     evt.preventDefault();
-    let displayItem;
+   console.log('inside handleImageClick');
+    setImgOrDes(!imgOrDes);
+  }    
 
-    
-
-
-    imgOrDes === !imgOrDes ? (
-        <img src={imgToShow.path} />
-      ) : (
-        <p>{imgToShow.description}</p>
-      );
-      console.log(displayItem);
-  };
+//     let displayItem;
+//     imgOrDes === !imgOrDes ? (
+//         <img src={imgToShow.path} />
+//       ) : (
+//         <p>{imgToShow.description}</p>
+//       );
+//       console.log(displayItem);
+//   };
 
   return (
     <section>
-      <div onClick={handleImageClick}>{displayItem}</div>
+      <div onClick={() => handleImageClick(imgToShow.id)}>
+        {imgOrDes && <img src={imgToShow.path} />}
+        {!imgOrDes && <p>{imgToShow.description}</p>}
+      </div>
       <div><button onClick={handleLikeClick}>LIKE</button></div>
       {/* <div>{counter}</div> */}
     </section>
