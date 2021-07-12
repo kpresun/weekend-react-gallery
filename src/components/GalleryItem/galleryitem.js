@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import './galleryitem.css'
 
 function GalleryItem({imgToShow, theLikes}) {
   //   const [counter, setCounter] = useState(0); - MIGHT not need because put router already is doing +=1
@@ -15,12 +16,14 @@ let displayItem; // going have to try to see what we can set this to so it work!
 
   return (
     <section>
-      <div onClick={() => handleImageClick(imgToShow.id)}>
+      <div className="gallery-items" onClick={() => handleImageClick(imgToShow.id)}>
+        <div className="item-detail">
         {imgOrDes && <img src={imgToShow.path} />}
         {!imgOrDes && <p>{imgToShow.description}</p>}
+        </div>
       </div>
       <div>
-        <button onClick={() => theLikes(imgToShow.id)}>LIKE: {imgToShow.likes}</button>
+        <button className="like-button" onClick={() => theLikes(imgToShow.id)}>LIKE: {imgToShow.likes}</button>
      </div>
     </section>
   );

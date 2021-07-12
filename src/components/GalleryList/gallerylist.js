@@ -8,7 +8,7 @@ function GalleryList({imgList, likeUpdates}) {
   // image, description, likes
   return (
     <>
-      <div>
+      <div className="Organized-images">
         {imgList.map(single => (
           <GalleryItem key={single.id} imgToShow={single} theLikes={likeUpdates}/>
         ))}
