@@ -8,4 +8,4 @@ const galleryItems = [
 
 ];
 
-module.exports = galleryItems;ß
+module.exports = galleryItems;
