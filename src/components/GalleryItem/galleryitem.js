@@ -5,16 +5,10 @@ function GalleryItem({imgToShow, theLikes}) {
   //   const [counter, setCounter] = useState(0); - MIGHT not need because put router already is doing +=1
   const [imgOrDes, setImgOrDes] = useState(true);
 
-  // This has to use the counter useState above ti display counter below like button.
-//   const handleLikeClick = (evt) => {
-//     evt.preventDefault();
-//     theLikes(imgToShow);
-//   };
-
 let displayItem; // going have to try to see what we can set this to so it work!
 
   const handleImageClick = (evt) => {
-    evt.preventDefault();
+    // evt.preventDefault();
    console.log('inside handleImageClick');
     setImgOrDes(!imgOrDes);
   }    
